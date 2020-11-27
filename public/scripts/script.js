@@ -19,10 +19,7 @@ let typed = new Typed('#typeText', {
 const scrollUpdated = () => {
   let scrollValue = document.documentElement.scrollTop;
   let windowHeight = window.innerHeight;
-  let i = 1;
-  for(i; i * windowHeight <= scrollValue; i++) {
-
-  }
+  let i = Math.round((scrollValue + 0) / windowHeight) + 1;
   let menuProgressCircle = document.getElementsByClassName('menuProgressCircle');
   if(menuProgressCircle[i - 2]) {
     menuProgressCircle[i - 2].classList.remove('selected');
