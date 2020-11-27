@@ -6,7 +6,7 @@ let typed = new Typed('#typeText', {
     'elegant',
     'beautiful',
     'wonderful',
-    'lit🔥'
+    'lit&#128293;'
   ],
   typeSpeed: 70,
   shuffle: true,
