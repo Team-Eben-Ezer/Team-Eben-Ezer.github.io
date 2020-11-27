@@ -15,3 +15,20 @@ let typed = new Typed('#typeText', {
   loop: true,
   loopCount: Infinity
 });
+
+const scrollUpdated = () => {
+  let scrollValue = document.documentElement.scrollTop;
+  let windowHeight = window.innerHeight;
+  let i = 1;
+  for(i; i * windowHeight <= scrollValue; i++) {
+
+  }
+  let menuProgressCircle = document.getElementsByClassName('menuProgressCircle');
+  if(menuProgressCircle[i - 2]) {
+    menuProgressCircle[i - 2].classList.remove('selected');
+  }
+  if(menuProgressCircle[i]) {
+    menuProgressCircle[i].classList.remove('selected');
+  }
+  menuProgressCircle[i - 1].classList.add('selected');
+};
