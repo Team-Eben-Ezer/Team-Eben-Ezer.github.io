@@ -8,6 +8,7 @@ body {
   text-align: center;
   font-family: 'Metropolis', 'Noto Sans KR', '나눔바른고딕', arial;
   letter-spacing: -1px;
+  overflow-x: hidden;
 }
 
 .weight100 {
@@ -111,4 +112,40 @@ body {
 
 #weMakeSthText {
   font-size: 7vh;
+}
+
+#scrollContainer {
+  pointer-events: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 97vh;
+  animation-duration: 2s;
+  animation-name: scrollBounce;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+@keyframes scrollBounce {
+  from {
+    height: 95vh;
+  }
+
+  to {
+    height: 97vh;
+  }
+}
+
+#scrollText {
+  font-size: 3vh;
+  margin-bottom: 1vh;
+}
+
+#arrowIcon {
+  width: 1vw;
 }
