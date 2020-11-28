@@ -1,4 +1,4 @@
-let typed = new Typed('#typeText', {
+const typed = new Typed('#typeText', {
   strings: [
     'special&#9996;',
     'awesome&#128170;',
